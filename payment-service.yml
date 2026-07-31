@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 0 #8083
 
 spring:
   datasource:
@@ -10,7 +10,11 @@ spring:
     hikari:
       minimum-idle: 2
       maximum-pool-size: 10
-
+      
+services:
+  order:
+    base-url: http://localhost:8086
+    
 app:
-  service-name: Payment Service
-  message: Payment configuration loaded from GitHub
+  service-name: Payment service
+  message: payment configuration loaded from GitHub
